@@ -1,0 +1,31 @@
+{
+    "name": "typescript-vite-library-template",
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "core:install": "pnpm install",
+        "core:build": "tsc && vite build",
+        "core:format": "prettier --write .",
+        "core:publish": "npm publish"
+    },
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "require": "./dist/index.umd.cjs"
+        }
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@types/node": "^18.15.3",
+        "typescript": "^4.9.5",
+        "vite": "^4.1.4",
+        "vite-plugin-dts": "^2.3.0"
+    },
+    "peerDependencies": {}
+}
